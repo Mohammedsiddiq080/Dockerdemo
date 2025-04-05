@@ -1,0 +1,10 @@
+# Dockerfile
+FROM python:3.9
+WORKDIR /app
+COPY . .
+RUN pip install flask
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.00
+ENV FLASK_RUN_HOST=5000
+EXPOSE 5000
+CMD ["python", "app.py"]
